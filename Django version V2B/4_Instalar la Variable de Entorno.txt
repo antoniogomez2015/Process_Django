@@ -1,0 +1,87 @@
+
+http://www.serviporno.com/videos/asi-entrena-sheena-shaw-su-ano/
+
+
+Curso de Django (21 videos)
+
+	https://www.youtube.com/playlist?list=PLEtcGQaT56cg3A3r-TNoc-PyVeOuAMB4x
+
+
+		Instalar Python, Django en Windows 7
+
+			https://www.youtube.com/watch?v=C6A-OV5O8Aw
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Instalar la Variable de Entorno:
+________________________________
+
+
+	_la variable de entorno me permitirá hacer que la consola de comandos de windows CMD, me reconosca Python, y sus
+
+	comandos, ya que ésta no está instalada por defecto
+
+
+	_para ésto, vamos ha "Inicio/Panel de Control/Sistema", ó 
+
+		_"Panel de control\Todos los elementos de Panel de control\Sistema"
+
+
+	_así, podremos entrar a las opciones de "Configuración avanzada del sistema/"
+
+
+	_leugo entramos a la sección de "Variables de entorno"
+
+
+	_leugo vamos ha "Variables del sistema", y buscamos en la lista uno que se llame "Path", y le damos ha "Edit"
+
+
+	_le damos ha "Edit", y vamos al final y escribimos punto y coma";", y a continuación escribimos la ruta donde 
+
+	se encuentra Python, y sus scripts ej:
+
+
+		"C:\RailsInstaller\Git\cmd;C:\RailsInstaller\Ruby2.1.0\bin;C:\Ruby21\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Autodesk\Backburner\;C:\Program Files\Common Files\Autodesk Shared\;C:\Program Files (x86)\Smart Projects\IsoBuster;C:\Program Files (x86)\Windows Live\Shared;%ProgramFiles%\digieffects\bin;C:\Program Files\nodejs\;C:\Program Files\Next Limit\RFRK 2013 For Maya;;C:\Program Files (x86)\MediaReactor Workstation;C:\Program Files\MediaReactor;C:\Program Files (x86)\QuickTime\QTSystem;C:\Program Files (x86)\QuickTime\QTComponents;C:\Program Files\Adobe\Adobe After Effects CC\Support Files\Plug-ins\AtomKraft\bin;C:\Program Files\Common Files\Nuke\8.0\plugins\AtomKraft 1.3.2\bin;C:\Program Files (x86)\backburner 2\;C:\Program Files (x86)\Extensis\Suitcase Fusion 6\;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Python34\;C:\Python34\Scripts;"
+
+
+
+
+Documentación de variable de entorno:
+_____________________________________
+
+
+
+	https://docs.djangoproject.com/en/1.8/howto/windows/
+
+		;C:\Python34\;C:\Python34\Scripts;
+
+		;C:\Python27; C:\Python27\Scripts;
+
+
+
+	http://www.geekuu.com/configurar-variables-de-entorno-windows-para-python/
+
+
+
+Prompt:
+_______
+
+
+	_de ésta manera tendremos el prompt, de python, dentro de la consola de comandos de windows dentro de la cuál,
+
+	podremos instalar el package, "pip", que ya biene preinstalado en python3.5
+
+
+	_para cargar el prompt, de python dentro de la consola de wondows, debemos escribir el siguiente comando:
+
+	"python", así, éste nos mostrará la versión de python, de demás detalles más a su vez, el prompt, de python,
+
+	estará disponible
+
+

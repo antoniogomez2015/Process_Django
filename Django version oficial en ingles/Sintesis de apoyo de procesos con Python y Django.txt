@@ -1,0 +1,234 @@
+
+
+
+
+Síntesis del proceso de configuración y desarrollo con python y django
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+	1_Instalar Python:
+
+		_primero procedemos ha instalar python, a través, de su respectivo instalador y configurar la variable en entorno
+
+	
+
+	2_instalar django:
+
+		_luego procedemos ha instalar django, descomprimiendo la versión deseada en el disco y luego yendo hasta su ruta a través, de la consola de
+
+		comandos de window, para luego proceder a correr el siguiente script python setup.py install + "Enter"
+
+
+
+	3_Crear un proyecto django:
+
+		_para crear un proyecto primero navegamos a la ruta donde deseamos crearlo a través de la consola de comandos de window, luego
+
+		debemos correr el siguiente script "django-admin startproject miPrimerProyecto + enter"
+
+
+
+	4_Correr el servidor de django:
+
+		_para ésto, primero navegamos hasta la ubicación del proyecto respectivo a través, de la consola de windows, y allí, corremos el
+
+		siguiente script "python manage.py runserver + enter"
+
+	
+		-en éste punto será creada la base de datos que dispone django por defecto para la app, de muestra que éste tiene
+
+
+
+	5_Acceder al servidor de django:
+
+		_para ésto vamos al navegador y buscamos "localhost:8000", para una mayor precisión podre acceder a través, de la dirección ip 
+
+		"http://127.0.0.1:8000/", (ésta dirección ip, nos aparecerá al momento de correr el servidor)
+
+
+
+	6_Crear y configurar bases de datos personalizadas:
+
+		_para ésto, debemos editar el archivo "settings.py", ubicado en la ruta principal del respectivo proyecto
+
+
+		_así, tendremos que dentro del archivo "settings.py", ubicar la sección de "DATABASES={}", e indicar la ruta absoluta y el nombre
+
+		que deseamos agregarle a la nueva base de datos que será generada
+
+
+
+	7_Sincronización de la base de datos:
+
+		_más ahora debemos sincronizar la base de datos para que los datos editados sean replicadados a una base de datos existente ó 
+
+		como en éste caso se creé una nueva base de datos con el nombre y ruta especificada
+
+
+
+	8_Creación de super usuario:
+
+
+		_a partir de la sincronización primaria de la bases de datos éste proceso nos pedirá que creemos un super usuario, el cuál,
+
+		se compone de un usuario, correo y contraseña
+
+
+
+	9_Crear App django:
+
+
+		_para ésto, primero vamos a la ubicación del proyecto donde deseamos crear la aplicación a través de la consola de windows
+
+
+		_luego debemos correr el siguiente script "python manage.py startapp + nombre de la aplicación + enter"
+
+
+
+	10_Definición de modelos django para una app:
+
+
+		_para ésto, debemos editar el archivo "models.py", ubicado dentro de la ruta/carpeta, de la app, deseada
+
+
+		_así, a pertir de la instrucción de models, "from django.db import models", podremos crear las clases python, deseadas las cuales
+
+		harán de la data las tablas de la base de datos respectiva
+
+
+
+	11_Configuración y sincronización de base de datos para una App en Django:
+
+		
+		_para ésto, tendremos que abrir nuevamente el archivo "settings.py", ubicato en la ruta principal del respectivo proyecto
+
+
+		_e ir a la sección "NSTALLED_APPS ={}", y agregar entre comillas simples el nombre de la app, que deseamos agregar a la base de datos
+
+
+		_luego tendremos que volver a sincronizar la base de datos para que éste registre los cambios y cree la tablas de la nueva app, que
+
+		estamos agregando, para ésto, debemos correr el siguiente script "python manage.py syncdb + enter"
+
+
+
+
+	12_migración de la información de App, en Django:
+
+
+		_para realizar una migración de la información de la app, primero tendremos que generar dicho archivo donde realizará poateriormente
+
+		el volcado de la información
+
+
+		_para ésto, tendremos que correr el siguiente script "python manage.py makemigrations + el nombre de la app + enter", así, se
+
+		generará la siguiente estructura de archivos
+
+
+		Migrations for 'polls':
+  		0001_initial.py:
+    			- Create model Question
+   		 	- Create model Choice
+    			- Add field question to choice
+
+
+
+
+	13_creación de tablas y volcado de la información sobre la base de datos en django:
+
+		
+		_primero navegamos hasta la ubicación del proyecto y app, respectiva a través, de la consola de windows
+
+
+		_luego, debemos correr el siguiente script "python manage.py sqlmigrate (nombre de la app) + 0001", así, se generarán
+
+		las tablas con el respectivo contenido del modelo "models.py", de la respectiva app
+
+
+
+
+	14_Creación de Views:
+
+
+		_una view, es una función python, que acepta una objeto "request",  como primer parámetro éste es obligatorio y es el 
+
+		va ha contener toda la información de las peticiones http, de las diferentes interfaces y devuelve un objeto "httpResponse", 
+
+
+
+	15_Url:
+
+
+		_ya que tenemos información configurada que mostrar ahora tenemos que indicarle ha django, las url, donde mostrar esa información
+
+		para ésto, tendremos que editar el archivo "settings.py", y buscar la variable "ROOT_URLCONF =''", y indicar cuál, será el módulo
+
+		encargado el "rooting", ó enrutamiento, en este caso es "miFirstProyect.urls"
+
+
+		_y dentro del módulo ".urls", django, buscará la variable "urlpatterns =''",
+
+
+		_así, django, intepretará lo siguiente:	url(r'^proofString/$', 'miFirstAppDjango.views.index')
+
+
+			
+			_r'^proofString/$':
+
+				_ésta es una expresión regular que apunta ha una página específica
+
+
+			_myFirstAppDjango:
+
+
+				_la cuál llamará el contenido de la app, "myFirstAppDjango"
+
+
+			_.views:
+
+
+				_concatenada a través de la disposición y expresión de la información en la view
+
+
+
+			_.index:
+
+
+				_concatenada a la función "index", de la view, que representará el contenido, en 
+
+				este caso será un string "¡Estamos creando nuestra primera view!!"
+
+
+
+
+	16_Correr App
+
+
+		_para ésto, lo primero que necesitamos hacer el correr el servidor para lo cuál, navegamos hasta la 
+
+		ubicación del proyecto a través, de la consola de windows, y corremos el siugiente script, 
+
+		"python manage.py runserver"
+
+
+		_luego vamos la navegador y buscamos la siguiente ruta "http://localhost:8000/proofString", nos mostrará
+
+		el contenido de la view
+
+			
+
+		
+		
+
+
+
+
+
+
+

@@ -1,0 +1,101 @@
+
+http://www.serviporno.com/videos/asi-entrena-sheena-shaw-su-ano/
+
+
+Curso de Django (21 videos)
+
+	https://www.youtube.com/playlist?list=PLEtcGQaT56cg3A3r-TNoc-PyVeOuAMB4x
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Descargar Django:
+_________________
+
+
+	_para ésto vamos a la página oficial en la sección de descarga "http://django.es/descarga/", y descargamos la
+
+	versión oficial del momento " Django-1.8.6.tar.gz.", "noviembre - 07 - 2015"
+
+
+	_luego podremos descomprimir éste archivo que hemos descargado en "C:\", y le dejamos el nombre por defecto
+
+	en este caso "C:\Django-1.8.6"
+
+
+
+
+Instalar Django:
+________________
+
+
+	_primero debemos abrir la consola de comandos de windows CMD, para ésto shortcut "Windows + R/CMD"
+
+
+	_luego ejecutamos el comando de python, para acceder al interprete de python (previamente debemos haber habilitado 
+
+	la variable de entorno de python, para la consola de comandos de wondows)
+
+
+	_package pip, éste permite activar el framework, de djando, para python
+
+
+	_en la versión de python 3.4-5, ya biene pre instalado el package, de "pip", y para llamarlo luego debemos en la 
+
+	consola de comandos de windos, ejecutar el comando de "python", para así, tener disponible el "prompt", en el cuál,
+
+	escribiremos el siguiente comando "easy_install pip."
+
+
+	_ahora vamos ha a la consola de comandos de windows, y navegamos hasta la ubicación donde descomprimimos django ej:
+
+
+
+		_C:\>cd Django-1.8.6 + "Enter"
+
+
+			_C:\Djando-1.8.6>
+
+
+	_luego debemos ejecutar dentro de Django el siguiente archivos de instalación:
+
+
+		_C:\Djando-1.8.6>python setup.py install + "Enter"
+
+
+	_y así, se procederá automáticamente la instalación de Django, dicho proceso terminará con la siguiente línea
+
+	"Finished processing dependencies for Django==1.8.6"
+
+
+
+Verificar la instalación de Django:
+___________________________________
+
+
+	_para comprobar la instalación django, debemos hacerlo a través, del prompt, sea a través, de la liea de comandos
+
+	de python, ó a través, de IDLE, de python, ó directamente a través, de la consola de comando de window, por medio
+
+	del comando "import django + enter"
+
+	
+	_así, si el prompt, de python, acepta el comando y nos da problemas ésto significa que django, está correctamente
+
+	instalado
+
+
+	_también, disponemos de la siguiente función "django.get_version() + enter", la cuál, podremos tipear en el prompt,
+
+	de python, para que así, éste nos imprima la versión de django instalada
+
+
+
+
+
+

@@ -1,0 +1,37 @@
+
+
+
+
+
+Curso de Django (21 videos)
+
+	https://www.youtube.com/playlist?list=PLEtcGQaT56cg3A3r-TNoc-PyVeOuAMB4x
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+Comandos generales para el servidor de Django:
+______________________________________________
+
+
+
+	_python manage.py help
+
+		_éste nos brinda una vista de ayuda dentro de la misma consola de comandos de window, en la cuál, muestra todos los elementos
+
+		existentes e instalados dentro de python, como djando y sus paquetes por ejemplo
+
+
+	_python manage.py sql --help
+
+
+
+
+
+
+
+

@@ -1,0 +1,122 @@
+
+
+
+Curso de Django (21 videos)
+
+	https://www.youtube.com/playlist?list=PLEtcGQaT56cg3A3r-TNoc-PyVeOuAMB4x
+
+	Ejemplos de database de django, ver el tutorial 5, del curso "https://www.youtube.com/watch?v=LW1pAgKf4Eg&list=PLEtcGQaT56cg3A3r-TNoc-PyVeOuAMB4x&index=5"
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Playing with the API en Django:
+_______________________________
+
+
+	Correr consola del interprete de python en consola windows:
+	___________________________________________________________
+
+
+	_para ésto, primero navegamos hasta la ubicación del proyecto a través, de la consola de windows
+
+
+	_luego corremos el siguiente script: "python manage.py shell", así, nos mostrará la versión de python, instalada así, como nos mostrará 
+
+	el prompt, de python, en pantalla
+
+
+
+	Importar modelos generados previamente:
+	_______________________________________
+
+
+	_para ésto, en el prompt, escribimos el siguiente script "from (nombre de la App).models import (tablas = ej: Question, Choice)", así, 
+
+	el modelo quedará cargado para luego porder recuperar datos de éste
+
+
+
+	Importar objetos dentro de modelos carcados previamente:
+	________________________________________________________
+
+
+	_para ésto, en el prompt, escribimos el siguiente script "Question.objects.all()", de ésta manera, estaremos llamando a todos los objetos
+
+	contenidos dentro de "Question"
+
+
+	
+	Timezone para hacer preguntas a la base de datos:
+	_________________________________________________
+
+
+	_para ésto, debemos primero importa "timezone", el cuál, ya biene instalado dentro del paquete django.util
+
+
+	_timezone, espera un valor de tiempo y fecha en el valor que se le pase
+
+
+	_así, en el interprete de python en la consola de windows, tipeamos el siguiente script "from django.utils import timezone", así, 
+
+	timezone, quedará cargado
+
+
+	_así, podremos hacer preguntas con contenido para la base de datos a través, de variables, en este caso la variable será "P", y 
+
+	"pregunta", sería la instancia de la variable, quedando de la siguiente manera: "P = Pregunta(asunto="Quien es tu escritor favorito", 
+
+	descripcion="", fecha_publicacion=timezone.now())"
+
+
+
+	Persintencia:
+	_____________
+
+
+	_ahora éstos datos debemos de persistirlos para que éstos sean guardados en la base de datos a través, del script "p.save()"
+
+
+
+	llamar un atributo de los creados en la base de datos:	
+	______________________________________________________
+
+
+	_para ésto escribimos ej: "P.id", nos debe de devolver "1"
+
+
+	_si escribimos "P.asunto", nos devolvera lo que escrimos previamente en asunto
+
+
+	_si escribimos "P.fecha_publicacion", nos mostrará la fecha de publicacíón de ese momento
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

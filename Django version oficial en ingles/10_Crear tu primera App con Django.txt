@@ -1,0 +1,57 @@
+
+Curso de Django (21 videos)
+
+	https://www.youtube.com/playlist?list=PLEtcGQaT56cg3A3r-TNoc-PyVeOuAMB4x
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+
+
+Crear tu primera App, con Django:
+_________________________________
+
+
+	_para ésto, primero debemos navegar hasta la ubicación del proyecto principal deseado en la consola de comandos de window
+
+
+	_a continuación debemos tipear el siguiente código: 
+
+
+
+
+		"python manage.py startapp + nombre de la aplicación + enter"
+
+
+
+
+	en éste ejemplo "miPrimeraAppDjango", así, aparecerá en el directorio principal, el nuevo directorio creado ó modelo, 
+
+	en este caso "miPrimeraAppDjango", éste directorio, proyecto ó modelo incluye los siguientes archivos:
+
+
+
+		_migrations
+
+			___init__
+
+		___init__
+		
+		_admin
+
+		_models
+
+		_tests
+
+		_views
+
+
+
+
+
+

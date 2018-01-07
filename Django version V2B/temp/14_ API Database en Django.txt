@@ -1,0 +1,343 @@
+
+
+
+Curso de Django (21 videos)
+
+	https://www.youtube.com/playlist?list=PLEtcGQaT56cg3A3r-TNoc-PyVeOuAMB4x
+
+	Ejemplos de database de django, ver el tutorial 5, del curso "https://www.youtube.com/watch?v=LW1pAgKf4Eg&list=PLEtcGQaT56cg3A3r-TNoc-PyVeOuAMB4x&index=5"
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+buscar en google el área de "consultas en Django ó Making queries", para ampliar la documentación
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Playing with the API en Django: (creación de objecto en la base de datos)
+_______________________________
+
+
+	Correr consola del interprete de python en consola windows:
+	___________________________________________________________
+
+
+	_para ésto, primero navegamos hasta la ubicación del proyecto a través, de la consola de windows
+
+
+	_luego corremos el siguiente script: "python manage.py shell", así, nos mostrará la versión de python, instalada así, como nos mostrará 
+
+	el prompt, de python, en pantalla
+
+
+
+	Importar modelos generados previamente:
+	_______________________________________
+
+
+	_para ésto, en el prompt, escribimos el siguiente script "from (nombre de la App).models import (tablas = ej: Question, Choice)", así, 
+
+	el modelo quedará cargado para luego porder recuperar datos de éste
+
+
+
+	Importar objetos dentro de modelos creados previamente:
+	________________________________________________________
+
+
+	_para ésto, en el prompt, escribimos el siguiente script "Question.objects.all()", de ésta manera, estaremos llamando a todos los objetos
+
+	contenidos dentro de "Question", y nos debería arrojar unos corchetes vacíos "[]"
+
+
+	
+	Timezone para hacer preguntas a la base de datos:
+	_________________________________________________
+
+
+	_para ésto, debemos primero importar el módulo "timezone", el cuál, ya biene instalado dentro del paquete django.util
+
+
+	_timezone, espera un valor de tiempo y fecha en el valor que se le pase
+
+
+	_así, en el interprete de python en la consola de windows, tipeamos el siguiente script 
+
+
+		"from django.utils import timezone"
+
+
+	así, timezone, quedará cargado
+
+
+	_así, podremos hacer preguntas con contenido para la base de datos a través, de variables, en este caso la variable será "q", y 
+
+	"pregunta", sería la instancia de la variable, quedando de la siguiente manera: 
+
+
+		"q = Question(question_text="Cuál es tu escritor favorito?", pub_date=timezone.now())"
+
+		"q = Question(question_text="Cuál es tu música favorita?", pub_date=timezone.now())"
+
+		"q = Question(question_text="Cuál es tu actor favorito?", pub_date=timezone.now())"
+
+
+
+	Persintencia:
+	_____________
+
+
+	_ahora éstos datos debemos de persistirlos para que éstos sean guardados en la base de datos a través, del script 
+
+
+		"q.save()"
+
+
+
+	llamar un atributo de los creados en la base de datos:	
+	______________________________________________________
+
+
+	_para ésto escribimos ej: 
+
+		"q.id"
+
+	nos debe de devolver "1"
+
+
+
+	_si escribimos 
+
+		"q.question_text" 
+
+	nos devolvera lo que escrimos previamente en asunto
+
+
+
+	_si escribimos 
+
+		"q.pub_date" 
+
+	nos mostrará la fecha de publicacíón de ese momento
+
+
+
+
+	Verificar el objeto creado en la base de datos:
+	_______________________________________________
+
+
+	_para ésto, a continuación tipeamos el siguiente script en este caso.
+
+
+		"Question.objects.all()"
+
+	nos arrojará en éste caso en vez, de unos corchetes vacíos "[]", ahora nos arrojará unos conteches con el objeto que hemos creado dentro
+
+	del modelo de "Question"
+
+		
+		"[(Question: Question object)]"
+
+
+
+	Recuperar objectos:
+	___________________
+
+
+	_para ésto, debemos pasarle la clave primaria al método GET, ej:
+
+		
+		"p = Question.objects.get(pk=1)"
+
+
+
+	Crear opciones "Choice", a través, del método "Create":
+	_______________________________________________________
+
+
+NOTE: éste método permite escribir directamente en la base de datos en la tabla relacióna y no deja acceder ha ésta, 
+
+	en éste caso a través, del método "choice_set"
+
+
+
+	_primero debemos llamar al interprete de python, dentro de django, para ésto debemos navegar hasta
+
+	la ubicacaión del proyecto a través, de la consola de comandos de windows
+
+		"python manage.py shell"
+
+
+	_para ésto primero si estamos continuando del paso enterior debemos llamar al modelo
+
+		">>>from myFirstAppDjango.models import Choice"
+
+
+	_para luego obtener los objectos de éste respectivo movdelo:
+
+
+		">>>Choice.objects.all()"
+
+
+	y en éste casi nos devolverá unos corchetes vacios "[]", por que aún no hemos escrito
+
+	nunguna opción
+
+
+	_para a continuación si, proceder ha crear la opciones ó "Choices", para ésto
+
+	procedemos ha tipear las siguientes sentencias:
+
+
+	>>> q.choice_set.create(choice_text='No mucho', votes=0) 
+
+		_así, éste nos arrojará lo siguiente: <Choice: No mucho>
+
+	>>> q.choice_set.create(choice_text='El cielo', votes=0) 
+
+		_así, éste nos arrojará lo siguiente: <Choice: El cielo>
+
+
+	>>> q.choice_set.create(choice_text='Te gusta el Diseño', votes=0) 
+
+		_así, éste nos arrojará lo siguiente: <Choice: Te gusta el Diseño>
+
+
+	>>> c = q.choice_set.create(choice_text='Sólo piratería de nuevo', votes=0)
+
+	>>> c.question <Question: Que onda?>
+
+
+
+	Filtrar objetos de la base de datos:
+	____________________________________
+
+
+	_para ésto, utilizamos el siguiente código:
+
+	>>> Choice.objects.filter(question__pub_date__year=current_year)
+
+	_ó traduciéndolo a nuestro ejemplo sería:
+
+	>>> Choice.objects.filter(choice_text='No mucho')
+
+	_así, nos devolverá la respectiva respuesta, en éste caso [(Choice: No mucho)]
+
+	_pero incluso podríamos hacer búsquedas refinadas a través, de búsquedas de "strings",
+
+	específicos, ej:
+
+	>>> Choice.objects.filter(choice_text__contains='cielo')
+
+	_así, nos arrojará la respuesta en la cuál, encuentra la coincidencia [(El cielo)]
+
+
+
+	Filtros en variables:
+	_____________________
+
+
+	_también, tenemos la posiblidad de guardar los resultados de búsquedas a través, de filtros en variables para
+
+	éstas ser utilizadas en deferentes procesos, para ésto, utilizamos el siguientes script:
+
+
+	>>>> miVariable = Choice.objects.filter(choice_text__contains='cielo')
+
+	_y para llamarla utilizamos el siguiente script ó método:
+
+	>>> miVariable.count()
+
+	_así, éste nos arrojará "1"
+
+
+	Método delete():
+	________________
+
+
+	_en éste ejemplo continuaremos del punto anterior donde tenemos el resultado de la búsqueda guardada en una variable
+
+	>>> miVariable.delete()
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Práctica Añadir datos a Views desde Base Datos, a través, del database, de Django:
+__________________________________________________________________________________
+
+
+	Correr el interprete de python:
+	_______________________________
+
+
+	_para ésto, primero debemo acceder hasta la ruta del proyecto respectivo a través, de la consola de comandos de windows
+
+
+	_luego, debemos correr el siguiente script, "python manage.py shell", para correr el interprete de python, en la conla de comandos de windows
+
+
+	
+	importar el modelo deseado y agregar datos:
+	___________________________________________
+
+
+	_importamos el modelo "model", deseados "from myFirstAppDjnago.models import Question + enter", ésto quiere decir que dentro de la app,
+
+	myFirstAppDjango, busque y luego lo importe el modelo "Question"
+
+
+	_luego debemos importar los importar los objetos dentro de modelos creados previamente para ésto apliacmos el siguiente comando, en éste caso:
+
+	"Question.objection.all()"
+
+
+	_para el modelo de "Questions", ó preguntan en Djando, éste cuenta con elementos especiales para su manejo, así, para éste tendremos que
+
+	importat también "from django.utils import timezone"
+
+
+	_así, ya podremos agregar nuevas preguntas el módulo "Questions", de forma personalizadas, para ésto debemos utilizar el siguiente formato:
+
+	P = Question(asunto="Cuantos días tiene el mes de Marzo", descripcion="", fecha_publicacion=timezone.now())
+
+
+	_ahora debemos hacer la persistencia de la pregunta ó la salvamos para ésto utilizamos el siguiente comando "p.save()"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

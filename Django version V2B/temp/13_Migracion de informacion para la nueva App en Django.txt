@@ -1,0 +1,51 @@
+
+http://www.serviporno.com/videos/asi-entrena-sheena-shaw-su-ano/
+
+
+Curso de Django (21 videos)
+
+	https://www.youtube.com/playlist?list=PLEtcGQaT56cg3A3r-TNoc-PyVeOuAMB4x
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Rectificar tables, creadas:
+___________________________
+
+
+	_Ahora corramos "migrate", de nuevo para crear las tablas correspondientes a nuestros modelos en la base de datos, para ésto, debemos eejcutar
+
+	el siguiente comando 
+
+
+		"python manage.py migrate", 
+
+
+	en la ruta del proyecto donde está el archivo manage.py
+
+
+	_El comando migrate toma todas las migraciones que no se aplicaron (Django lleva registro de cuáles se aplicaron usando una tabla especial en la 
+
+	base de datos llamada django_migrations) y las corre contra la base de datos - esencialmente, sincroniza el esquema de la base de datos con los 
+
+	cambios hechos a nuestros modelos.
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,77 @@
+
+
+
+Curso de Django (21 videos)
+
+	https://www.youtube.com/playlist?list=PLEtcGQaT56cg3A3r-TNoc-PyVeOuAMB4x
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+URLs para Views en Django:
+__________________________
+
+
+	Descripción:
+	____________
+
+
+	_luego de haber desarrollado la view, y que ya tenemos algo que mostrar, ahora tendremos que indicarle ha django, la URL, a la cuál,
+
+	nuestro código debe de enlazar para poder mostrar la view
+
+
+
+	_para ésto, debemos sustituir el código
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+from django.conf.urls import include, url
+from django.contrib import admin
+
+urlpatterns = [
+     url(r'^$', 'myFirstAppDjango.views.index', name='index'),
+     url(r'^admin/', include(admin.site.urls)),
+
+]
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+	_así, primero debemos importar la función que vamos ha llamar, en éste caso, debemos importar le función "url()"
+
+
+	_donde "'^$'", a la página ó ruta del url, en el navegador, ésta configuración por defecto "'^$'", llamará al "index.html", ó archivo base
+
+	.html, principal del proyecto, más para páginas diferentes al "index", tendremos que personalizar la instrucción, ej "'^productos/'",
+
+
+	_luego a través, de la siguiente instrucción concatenada debemos indicar tanto la app, "myFirstAppDjango", respectiva, la view, "views", y la 
+
+	respectiva función a implentar, en éste caso "index", quedando así, 'myFirstAppDjango.views.index'
+
+
+	_luego a través, del siguiente atributo "name="", debemos indicar ó reafirmar el nombre de la función a utilizar de la configuración de la view,
+
+	respectiva
+
+
+
+
+
+

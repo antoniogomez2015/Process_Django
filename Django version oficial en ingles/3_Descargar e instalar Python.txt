@@ -1,0 +1,84 @@
+
+http://www.serviporno.com/videos/asi-entrena-sheena-shaw-su-ano/
+
+
+Curso de Django (21 videos)
+
+	https://www.youtube.com/playlist?list=PLEtcGQaT56cg3A3r-TNoc-PyVeOuAMB4x
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Descargar e instalar Python:
+____________________________
+
+
+	_primero vamos a la página oficial para descar python "https://www.python.org/downloads/release/python-350/",
+
+	en este ejemplo estamos descargando la versión "python-3.5.0" "moviembre - 07 - 2015"
+
+
+	_luego procedemos ha instalarlo como cualquier programa 
+
+
+	_al finalizar de instalarlo podemos ir ha "window/programas/Python 3.5/", y ver que tenemos los siguientes 
+
+	ejecutables a nuestra disposición
+
+
+		_IDEL (Python GUI)
+
+			_ésta es la interface gráfica de usuario que nos suministra python para el desarrollo, ésta
+
+			nos servirá tanto para escribir código como para interpretarlo
+
+
+		_Python (Command line)
+
+			_éste es un equivalente a la línea de comando de windows "CMD", para el desarrollo en línea
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Comprobar la instalación de Python:
+___________________________________
+
+
+	_para ésto, podríamos acceder a su ubicación a través, del CMD, de windows "Windows + R/CMD", y hacer la 
+
+	siguiente búsqueda "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Python 3.4", dir + "Enter", 'o
+
+	"C:\Python34"
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Desarrollar en Python:
+______________________
+
+
+	_para desarrollar en python, primariamente disponemos de 2 opciones
+
+
+		_Python (Command line)
+
+			_para ésta vamos ha "Window/Programs/Python/"
+
+
+		_IDLE (Python GUI)
+
+			_para ésta vamos ha "Window/Programs/Python/" (ésta es la opción más recomendada)
+	
+
+
+
+

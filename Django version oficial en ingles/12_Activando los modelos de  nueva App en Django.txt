@@ -1,0 +1,97 @@
+
+Curso de Django (21 videos)
+
+	https://www.youtube.com/playlist?list=PLEtcGQaT56cg3A3r-TNoc-PyVeOuAMB4x
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Setting Proyect Django:
+_______________________
+
+
+	_más ahora debemos volver a las configuraciones de proyecto principal u original creado inicialmente, para ésto, debemos abrir el archivo
+
+	en este caso: "C:\proyecto\MTVMCotizacion\miPrimerProyecto\miPrimerProyecto", editando así, el archivo "settings.py", del proyecto principal
+
+
+	_ya que en las configuraciones del proyecto "settings.py", es donde se registran las aplicaciones existentes ó creadas, por ésta razón
+
+	debemos abrir el archivo "settings.py", e ir a la sección de "INSTALLED_APPS ={}", y agregar en dicha sección entre comillas simples el
+
+	nombre de la aplicación "App" que hemos generado, en este caso quedaría así: 'miPrimeraAppDjango', luego procedemos a guardar el archivo	
+
+	para que así, django, reconozca la nueva app generada, y escribir nuevamente la bases de datos, django pueda generar la tablas sobre ésta 
+
+	nueva app
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Sincronización de bases de datos para una nueva App en Django:
+______________________________________________________________
+
+
+	_luego de haber configurado la nueva App, dentro de las configuraciones "settings.py", del proyecto "miPrimerProyecto", en el paso anterior
+
+
+	_vamos a la consola de comandos de window, y navegamos hasta la ubicación del proyecto, en éste caso "djangoProyect", y tipeamos el 
+
+	siguiente código: 
+
+
+
+
+		"python manage.py makemigrations + (nombre de la app) + enter" 
+
+
+
+
+	_para que así vuelva hacer la suncronización a la base de datos de todas las apps, existentes dentro de "settings.py", incluyendo la nueva 
+
+	que hemos agregado para que así, ésta nueva que hemos agregado quede registrada dentro la bases de datos
+
+
+	_así, nos arrojará luego de realizar el proceso un mensaje así:
+
+
+	Migrations for 'polls':
+  	   0001_initial.py:
+    	    - Create model Question
+    	    - Create model Choice
+    	    - Add field question to choice
+
+
+	indicándonos los modelos que que se han agregado a la tabla de la respectiva app
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

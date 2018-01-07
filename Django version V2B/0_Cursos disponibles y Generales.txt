@@ -1,0 +1,77 @@
+
+
+
+vigencia en (8 de noviembre del 2015)
+
+
+Curso de Django (21 videos)
+
+	https://www.youtube.com/playlist?list=PLEtcGQaT56cg3A3r-TNoc-PyVeOuAMB4x
+
+
+Django por Codigo Facilito (29 videos)
+
+	https://www.youtube.com/playlist?list=PLmuz5ELXWWbYUXYLhj7pc2hm8_kK_ixIs
+
+
+
+http://djangotutorial.readthedocs.org/es/1.8/index.html
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Definición de Django:
+_____________________
+
+
+	_sus creadores lo definen como un framework phython, de alto nivel que impulsa un desarrollo rápido y 
+
+	límpio
+
+
+	_djando, se basa en la:
+
+
+		_rapidéz
+
+		_calidad
+
+		_sostenibilidad
+
+		_sencillez
+
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Django M-T-V (Model - Template - View):
+_______________________________________
+
+
+	_djando, se define como un framework, de acoplamiento flexible con una estructura con secuencia de dependencias
+
+	aunque no total entre las capas que lo conforman 
+
+
+
+Estructura del modo MTV:
+________________________
+
+
+
+		  Model:                 Template:                  View:          
+		 _______                __________                 ______            
+  
+
+	_datos de la palicaicón      Como se Presentan       Cuáles se presentan
+
+	
+
+
+
+
+

@@ -1,0 +1,38 @@
+
+
+
+
+
+Curso de Django (21 videos)
+
+	https://www.youtube.com/playlist?list=PLEtcGQaT56cg3A3r-TNoc-PyVeOuAMB4x
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+Desistalar Django:
+__________________
+
+
+	Referencia: 
+
+		http://stackoverflow.com/questions/20897851/uninstall-django-completely
+
+
+	_para ésto primero debemos ir a la ubicación de python, específicamente a la sección de scripts, de éste en éste caso 
+
+	"C:\Python\Python35\Scripts"
+
+
+	_luego debemos tipear el siguiente código "pip uninstall Django", así, luego éste nos pedirá confirmación para realizar el
+
+	proceso de desistalación
+
+
+

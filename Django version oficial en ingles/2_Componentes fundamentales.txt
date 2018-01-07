@@ -1,0 +1,146 @@
+
+http://www.serviporno.com/videos/asi-entrena-sheena-shaw-su-ano/
+
+
+Curso de Django (21 videos)
+
+	https://www.youtube.com/playlist?list=PLEtcGQaT56cg3A3r-TNoc-PyVeOuAMB4x
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Funcionamiento del framework Djnago:
+____________________________________
+
+
+---------------------------------------------------------------------------------------------------------------
+
+Componentes fundamentales:
+__________________________
+
+
+	ORM: (Object - Related Mapper)
+	____
+
+
+	_éste se encarga de relacionar los diferentes elementos tanto la bases de datos por phython, con los modelos
+
+	a través, del siguiente esquema:
+	
+	--------------------------------------------------------------------------------------------------------
+
+
+		_ORM: (settings.py)
+
+			_Modelos
+
+			_Phython DB API
+
+
+	--------------------------------------------------------------------------------------------------------
+
+	_a su vez, los modelos se relacionan con las views ó entornos renderizables
+
+	--------------------------------------------------------------------------------------------------------
+
+
+		_Modelos:
+
+			_Views
+
+
+	--------------------------------------------------------------------------------------------------------
+
+	_a su vez, las views, se relacionan con las html-templates y  uris.py	
+
+	--------------------------------------------------------------------------------------------------------
+
+
+		_Views:
+
+			_Html Templates
+
+			_Units.py
+
+
+
+
+---------------------------------------------------------------------------------------------------------------
+
+Definiciones:
+_____________
+
+
+	ORM:
+	____
+
+
+	_el mapeado ORM, nos permite definir todo nuestro modelos de datos totalmente con lenguaje phython, sin la 
+
+	necesidad de la implementación de Sql
+
+
+	_phython, nos ofrece un api, completa para acceder a nuestra base de datos
+
+	--------------------------------------------------------------------------------------------------------
+
+
+	Html Templates:
+	_______________
+
+
+	_django, cuenta con un motor de plantillas que se ha construido para que sea lo más amigable posible para
+
+	los diseñadores
+
+	_éstas están orientadas a los diseñadores y no a los programadores y están simplificadas bajo 
+
+	"programming-esque"
+
+
+	_una de las características que tiene djando, es la herencia de plantillas lo que nos da la posibilidad de 
+
+	utilizar una plantilla y extender sus posibilidades y alcances
+
+	--------------------------------------------------------------------------------------------------------
+
+
+
+---------------------------------------------------------------------------------------------------------------
+
+Extended:
+_________
+
+
+	_django, permite la incorporación de módulos de terceros dentro de el, lo que llaman baterías incluidas,
+
+	cuenta con un sistema para enchufar aplicaciones de un modo muy sencillo
+
+
+	_y el mismo framework, ya cuenta con un buen número de aplicaciones que podríamos utilizar en nuestros 
+
+	proyectos
+
+
+
+---------------------------------------------------------------------------------------------------------------
+
+Potencialidades:
+________________
+
+
+
+	_cuenta con una interface, de administración de un sitio web automática, amigable y personalizable lista
+
+	para usar
+
+	
+	_también, cuenta con un sistema de internacionalización para crear proyectos en distintos idiomas
+
+
+	_un excelente sistema cache que mejora el sistema de cargas 

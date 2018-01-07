@@ -1,0 +1,74 @@
+
+http://www.serviporno.com/videos/asi-entrena-sheena-shaw-su-ano/
+
+
+Curso de Django (21 videos)
+
+	https://www.youtube.com/playlist?list=PLEtcGQaT56cg3A3r-TNoc-PyVeOuAMB4x
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Analisis de un proyecto Django:
+_______________________________
+
+
+	_miPrimerProyecto
+
+		_éste sirve de contenedor del proyecto y para django, django, no lo toma en cuenta por ende podemos renombrarlo
+
+		de ser necesario posteriormente lo cuál, no limita nuestra aplicación
+
+
+
+		_miPrimerProyecto
+
+			_éste si es el paquete "package", python, para nuestro proyecto
+
+			
+			__init__.py
+
+				_éste es un archivo vacío que sirve para indicarle ha python, que ese directorio debe ser
+
+				considerado como un paquete python
+
+
+			_Settings.py
+
+				_éste es el que va ha tener las configuraciones de nuestro proyecto django
+
+
+			_urls.py
+
+				_en éste es donde se va ha determinar la configuración url, ya que djando, utiliza un esquema
+
+				de urls, limpio y elegante
+
+
+			_wsgi.py
+
+				_éste será utilizado como un punto de entrada cuando despleguemos nuestro proyecto django
+
+				en un servidor web, que sea compatible con wsgi, que significa "Web Server Gateway Interface",
+
+				que es la especificación para una interface, simple y universal entre servidores web, y 
+
+				aplicaciones web, ó framework, para el lenguaje de programación python, 
+
+
+		_manage.py
+
+			_éste es una utilidad de líneas de comandos que nos va ha permitir operar en nuestros proyectos django,
+
+			de muchos modos diferentes
+
+
+
+
+
+

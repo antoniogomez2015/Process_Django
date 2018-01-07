@@ -1,0 +1,56 @@
+
+http://www.serviporno.com/videos/asi-entrena-sheena-shaw-su-ano/
+
+
+Curso de Django (21 videos)
+
+	https://www.youtube.com/playlist?list=PLEtcGQaT56cg3A3r-TNoc-PyVeOuAMB4x
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Playing with the API en Django:
+_______________________________
+
+
+	Descripción:
+	____________
+
+
+	_una aplicación  "App", django, es simplemente un paquete "package", python, con una cierta estructura localizada
+
+	en algún sitio de la ruta ó path, de python, 
+
+
+	_la aplicación puede estar ubicada en cualquier ubicación de nuestro disco
+
+
+
+	Ver base de datos generada en la consola de comandos de windows:
+	________________________________________________________________
+
+
+	_para ésto, vamos a la ubicaión del proyecto deseado y tipeamos el siguiente código 
+
+	"python manage.py sql miPrimeraAppDjango + enter", así, éste nos mostrará las bases de datos existente para ésta 
+
+	app, en concreto
+
+
+
+
+
+
+
+
+
+

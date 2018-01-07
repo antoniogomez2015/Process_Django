@@ -1,0 +1,309 @@
+
+http://www.serviporno.com/videos/asi-entrena-sheena-shaw-su-ano/
+
+
+Curso de Django (21 videos)
+
+	https://www.youtube.com/playlist?list=PLEtcGQaT56cg3A3r-TNoc-PyVeOuAMB4x
+
+
+
+Video2Brain Fundamentos del Diseño Web Front-End
+	http://simpleyparatodos.blogspot.com/2015/05/video2brain-fundamentos-del-diseno-web.html
+
+
+		simpleyparatodos.blogspot.mx_Fundame…ront-end.part5.rar
+
+			https://mega.nz/#!lNZnEZZD!n7qvJq4Y3ORrnxqAl4RdT05An0MzxOPkllODiQqrJtQ
+
+		simpleyparatodos.blogspot.mx_Fundame…ront-end.part4.rar
+
+			https://mega.nz/#!NRIQVQLa!VSwGl-rBAUr-EBaNePu3XwigpPBVz1VXKsIFzbol_2c
+
+		simpleyparatodos.blogspot.mx_Fundame…ront-end.part3.rar
+
+			https://mega.nz/#!cJpjBCgT!fRY3X6BaR2lJleQtVpG8t7wpYOf_NweXWsak_GroB2c
+
+		simpleyparatodos.blogspot.mx_Fundame…ront-end.part2.rar
+
+			https://mega.nz/#!sQhEEK6b!-qYhRGpv9N10RZs65OpTw69uvJrpOcXrpeAVPyYrixg
+
+		simpleyparatodos.blogspot.mx_Fundame…ront-end.part1.rar
+
+			https://mega.nz/#!wNohQCCQ!WtcHwUbJOWrhd2ePk2pYwldlrZyz478rJtopH7-tk_o
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+Descripcion:
+____________
+
+
+	_así, luego de definir los modelos en "project/app/models.py", debemos incorporar los mosdelos creados con la base de 
+
+	datos para que ésta
+
+
+
+
+Script:
+_______
+
+
+	_para ésto, primero navegamos hata la ubicación del proyecto donde está el archivo "manage.py", y estando allí, corremos
+
+	el siguiente comando:
+
+
+
+		"python manage.py sql + (nombre de la app)"
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Activando modelos:
+__________________
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+	_Crear el esquema de base de datos (las sentencias "CREATE TABLE") para la app.
+
+	
+	_Crear la API Python de acceso a la base de datos para acceder a los objetos "Question" y "Choice".
+
+
+	_Pero primero debemos informarle a nuestro proyecto que la app "myFirstAppDjango", está instalada.
+
+
+
+Settings App:
+_____________
+
+
+	_para ésto, debemos abrir el archivo "settings.py", en la estructura principal del proyecto
+
+	
+	_y buscar la variable INSTALLED_APPS = {}, y agregar entre comillas simples el nombre de la app, ha agregar, en éste caso
+
+	en la app "mySecondAppDjango"
+
+
+	_Ahora Django sabe sobre nuestra app "mySecondAppDjango", y para sincronizar ésta nueva app debemos correr el siguiente comando
+
+	en la ubicación del respectivo proyecto:
+
+
+		"python manage.py makemigrations mySecondAppDjango"
+
+
+	_a partir de ejecutar éste comando debemos ver ago así:
+
+
+	Migrations for 'polls':
+  		0001_initial.py:
+    			- Create model Question
+    			- Create model Choice
+    			- Add field question to choice
+
+
+	_Corriendo makemigrations, le estamos diciendo a Django que hemos hecho algunos cambios a nuestros modelos (en este caso, nuevos modelos) 
+
+	y que quisiéramos registrar esos cambios en una migración.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ESTAS OPCIONES EN EL TUTORIAL EN ESPAÑOL: "http://djangotutorial.readthedocs.org/es/1.8/intro/tutorial01.html", HAN SIDO DESCARTADOS POR AHORA
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+Sincronización de la bases de datos:
+____________________________________
+
+
+	_de ésta menra estaremos indicándole ha django, la ubicación de la base de datos a crear a través, de una ruta 
+
+	abasoluta así, como el nombre de la base de datos específica como el tipo
+
+
+	_luego, debemos navegamos a través, de la consola de comandos de window, hasta la ubicación del proyecto, 
+
+	específicamente a la ubicación del archivo "djangoProyect/manage.py"
+
+
+	_ya en esa ubicación debemos tipear el siguiente script: "python manage.py syncdb + enter"
+
+
+
+Creación de super usuario:
+__________________________
+
+
+	_luego nos pedirá en el proceso que creemos un super usuario, le decimos que "yes + enter"
+
+
+	_así, nos perdirá un username, le indicaremos por ej: "tonyMaster"
+
+	
+	_también, nos dedirá un email addres, le indicaremos por ej: "monoproduccion@gmail.com"
+
+
+	_por último, nos pedirá un passwork, el cuál, al tipearlo no podremos verlos en pantalla así, que 
+
+	tendremos que ser cuidadosos en no repetir charácteres no deseados, luego tendremos que conformar
+
+	éste password, en éste caso le indicaremos el password "15728364"
+
+
+	_así, al final nos dirá "Superuser created successfully"
+
+
+	---------------------------------------------------------------------------------------------------------------
+
+
+Generación de bases de datos:
+_____________________________
+
+
+	_así, podremos ver que al final de éste proceso en la ruta específicada en el proyecto, en este caso en la
+
+	ubicación del "manage.py"
+
+
+	_se ha creado un archivo con el nombre y extensión indicado en la configuración del archivo "settings.py",
+
+	en éste caso específico se ha creado el archivo "C:\djangoProyect\", "database.sqlite"
+
+
+
+
+
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Setting Proyect Django:
+_______________________
+
+
+	_más ahora debemos volver a las configuraciones de proyecto principal u original creado inicialmente, para ésto, debemos abrir el archivo
+
+	en este caso: "C:\proyecto\MTVMCotizacion\miPrimerProyecto\miPrimerProyecto", editando así, el archivo "settings.py", del proyecto principal
+
+
+	_ya que en las configuraciones del proyecto "settings.py", es donde se registran las aplicaciones existentes ó creadas, por ésta razón
+
+	debemos abrir el archivo "settings.py", e ir a la sección de "INSTALLED_APPS ={}", y agregar en dicha sección entre comillas simples el
+
+	nombre de la aplicación "App" que hemos generado, en este caso quedaría así: 'miPrimeraAppDjango', luego procedemos a guardar el archivo	
+
+	para que así, django, reconozca la nueva app generada, y escribir nuevamente la bases de datos, django pueda generar la tablas sobre ésta 
+
+	nueva app
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Sincronización de bases de datos para una nueva App en Django:
+______________________________________________________________
+
+
+	_luego de haber configurado la nueva App, dentro de las configuraciones "settings.py", del proyecto "miPrimerProyecto", en el paso anterior
+
+
+	_vamos a la consola de comandos de window, y navegamos hasta la ubicación del proyecto, en éste caso "djangoProyect", y tipeamos el 
+
+	siguiente código: "python manage.py syncdb" 
+
+
+	_para que así vuelva hacer la suncronización a la base de datos de todas las apps, existentes dentro de "settings.py", incluyendo la nueva 
+
+	que hemos agregado para que así, ésta nueva que hemos agregado quede registrada dentro la bases de datos
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,75 @@
+
+http://www.serviporno.com/videos/asi-entrena-sheena-shaw-su-ano/
+
+
+Curso de Django (21 videos)
+
+	https://www.youtube.com/playlist?list=PLEtcGQaT56cg3A3r-TNoc-PyVeOuAMB4x
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Crear un proyecto Django:
+_________________________
+
+
+	_primero debemos navegar hasta donde deseamos crear el proyecto
+
+
+	_a continuación, escribimos el siguiente comando 
+
+
+
+		"django-admin startproject miPrimerProyecto + enter", 
+
+
+
+	donde:
+
+
+		_django-admin
+
+			_éste es el administrador de proyectos de djando
+
+
+		_startproject
+
+			_ésta es la sentencia para crear un proyecto
+
+
+		_miPrimerProyecto
+
+			_éste es el nombre que se le dará al proyecto generado
+
+
+
+	_así, se generará la siguiente estructura de archivos en la ruta de proyecto especificada:
+
+
+		_C:\Users\mono\AppData\Roaming\idesktop\DFolder\capetas y arvhicos\PROCESOS\Django\proyectSample\
+
+			_miPrimerProyecto
+
+				_miPrimerProyecto
+
+					___init__.py
+
+					_settings.py
+
+					_urls.py
+
+					_wsgi.py
+
+				_manage.py
+
+
+
+
+
+
+

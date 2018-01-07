@@ -1,0 +1,37 @@
+
+
+
+
+Curso de Django (21 videos)
+
+	https://www.youtube.com/playlist?list=PLEtcGQaT56cg3A3r-TNoc-PyVeOuAMB4x
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Modo de trabajo de Django:
+__________________________
+
+
+	_su modo de trabajo se trata de un serie de capas que intentan mantener entre ellas elmínimo número dependencias
+
+	posibles
+
+
+		_ésto permite una sencilla reutilización de los contenidos
+
+
+		_también simplifica los futuros cambios posibles al poser centrarse en una capa concreta sin que ésto tenga
+
+		repercuciones en los demás elementos de la aplicación
+
+
+
+

@@ -1,0 +1,182 @@
+
+http://www.serviporno.com/videos/asi-entrena-sheena-shaw-su-ano/
+
+
+Curso de Django (21 videos)
+
+	https://www.youtube.com/playlist?list=PLEtcGQaT56cg3A3r-TNoc-PyVeOuAMB4x
+
+
+Documentaciones de atributos disponibles para construir Modelos
+
+	https://docs.djangoproject.com/en/1.8/ref/models/fields/
+
+	http://www.maestrosdelweb.com/curso-django-el-modelo-de-datos/
+
+
+
+Curso de código facilito Django: video 5 / Curso Django 5 - Bases de Datos
+
+aqui quedamos: https://www.youtube.com/watch?v=5Q8iSpJFYR8&index=5&list=PLmuz5ELXWWbYUXYLhj7pc2hm8_kK_ixIs
+
+
+Video2Brain
+
+
+Python
+
+	http://simpleyparatodos.blogspot.com/search?q=python
+
+
+
+
+Video2Brain Fundamentos del Diseño Web Front-End
+
+	http://simpleyparatodos.blogspot.com/2015/05/video2brain-fundamentos-del-diseno-web.html
+
+
+
+
+
+
+
+
+
+Audio
+
+	http://simpleyparatodos.blogspot.com/2015/10/video2brain-fundamentos-del-tratamiento.html
+
+
+Fundamentos
+
+	http://simpleyparatodos.blogspot.com/search?q=fundamentos+programacion
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+
+
+Definición de Modelos con Django:
+_________________________________
+
+
+	Características:
+	________________
+
+	_los modelos presentan el contenido y diseño de las bases de datos
+
+
+	_cada modelo en django, es una clase python, que es eredada de "django.db.models"
+
+
+	_y el nombre de la clase que utilizamos será el nombre de la tabla que contendrá los respectivos
+
+	atributos ó variables de clase que ésta contene
+
+
+	_las variables de clase, cada una de las cuales representa un campo de la base de datos en el modelo, 
+
+	que nosotros creamos representa un campo de la base de datos
+
+
+	_y los valores de dichos atributos dependerán del tipo de requerimiento específico de nuestra necesaidades
+	
+	para ésto, django cuenta con un constructor de sentencias ya preconstruidas para tales fines, ej:
+
+	"First_name = models.CharFields(max lengh)"
+
+
+		_First_name
+
+			_donde "First_name", corresponde al nombre que le damos al atributo ó sub-clase
+
+
+		_models
+
+			_donde "models", representa la clase princial de la cuál hereda éste
+
+
+		_CharField(max lengh)
+
+			_donde "CharField(max lengh)", representa el valor ó tipo de contenido ha almacenar
+
+			en la base de datos
+
+
+	
+
+	
+	personalización de un modelo:
+	_____________________________
+
+	_para ésto, debemos abrir archivo generado dentro la app, que hemos creado, en este caso 
+
+		"C:\proyecto\MTVMCotizacion\miPrimerProyecto\miPrimeraAppDjango", de ésta manera abriremos el archivo "models.py",	
+	
+	por ejemplo con sublime text
+
+
+	_en el arcihvos "models", es en el cuál, podremos agregar la información y diseño que presentará el modelo ó módulo ó proyecto,
+
+	en este caso, utilizaremos el siguiente contenido de ejemplo:
+
+	-----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+from django.db import models
+
+
+class Question(models.Model):
+    question_text = models.CharField(max_length=200)
+    pub_date = models.DateTimeField('date published')
+
+
+class Choice(models.Model):
+    question = models.ForeignKey(Question)
+    choice_text = models.CharField(max_length=200)
+    votes = models.IntegerField(default=0)
+
+
+
+----------------------------------------------------------------
+
+from django.db import models
+
+# Create your models here.
+
+class blogPost(models.Model):
+	tittle=models.CharField(max_length=150)
+	body=models.TextField()
+	time=models.DateTimeField()
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+Metalenguaje:
+_____________
+
+
+	_Cada campo ó "field", está representado por una instancia de una clase
+
+
+		_CharField
+
+			_para campos de textos con una capacidad de 30 caracteres
+
+
+		_TextField
+
+			_para campos con textos largos
+
+
+		_DateTimeField
+
+			_para fechas
+

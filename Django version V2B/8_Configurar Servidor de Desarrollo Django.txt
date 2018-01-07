@@ -1,0 +1,124 @@
+
+http://www.serviporno.com/videos/asi-entrena-sheena-shaw-su-ano/
+
+
+Curso de Django (21 videos)
+
+	https://www.youtube.com/playlist?list=PLEtcGQaT56cg3A3r-TNoc-PyVeOuAMB4x
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+
+
+Generalidades del servidor Django:
+__________________________________
+
+
+	_en la consola siempre podremos ver la novedades de las acciones que se vayan ejecutando
+
+
+	_para detener el servidor de django basta con aplicar "Control + C"
+
+
+	_cambiar ha ip, pública para poder acceder al proyecto desde cualquier computador, para ésto, debemos conectarnos
+
+	de la siguiente manera al servidor de django: "python manage.py runserver 0.0.0.0:8000", así, serán expuestas todas
+
+	las ips, públicas de nuestro computador en el servidor web, éste proceso nos pedirá permisos del firewall, de 
+
+	windows, para obtener permisos
+
+
+
+
+Configurar servidor de desarrollo Django:
+_________________________________________
+
+
+	_django, ya dispone de un servidor local incorporado éste es "Python's WSGI"
+
+
+	_para acceder ha éste debemos primero navegar hasta el directorio primario del proyecto deseado, ej:
+
+	"miPrimerProyecto"
+
+
+	_y a continuación ejecutamos el siguiente comando: "python manage.py runserver + enter"
+
+
+NOTE:	a partir del momento que ejecutamos el servidor de django, primera vez será agregada una base de datos
+
+	por defectos SQLite "db.sqlite3", en la ruta del respectivo proyecto en éste caso en "miPrimerProyecto"
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Acceder al servidor Django:
+___________________________
+
+
+	_para ésto vamos al navegador y vamos a la ruta "localhost:8000", para una mayor precisión podríamos entrar a través,
+
+	de la ip "http://127.0.0.1:8000/", (ésta dirección ip, nos aparecerá al momento de correr el servidor), así, nos aparecerá 
+
+	el siguiente mensaje de bienvenida "It worked!, Congratulations on yout first Django-powered page."
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Estructura de archivos del servidor Django:
+___________________________________________
+
+
+	_al activar el servidor de django, serán agregados los siguientes archivos:
+
+
+	_miPrimerProyecto
+
+		_miPrimerProyecto
+
+			___pycache__
+
+				___init__.cpython-34.pyc
+
+				_settings.cpython-34.pyc
+
+				_urls.cpython-34.pyc
+
+				_wsgi.cpython-34.pyc
+
+
+		_db.sqlite3
+
+			_ésta es un base de datos sQlLite3, por defecto
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

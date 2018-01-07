@@ -1,0 +1,127 @@
+
+
+Curso de Django (21 videos)
+
+	https://www.youtube.com/playlist?list=PLEtcGQaT56cg3A3r-TNoc-PyVeOuAMB4x
+
+
+	https://docs.djangoproject.com/en/1.8/ref/databases/#mysql-notes
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+
+Crear tablas de la base de datos para las Apps, existentes en "settings.py":
+____________________________________________________________________________
+
+
+	_para ésto debemos navegar en la consola de comandos de windows, hasta la ubicación del proyecto y de la app
+
+
+	_y estando en esa ubicación correr el siguientes script 
+
+
+
+
+		"python manage.py. migrate"
+
+
+
+	
+	_El comando migrate se fija en el setting INSTALLED_APPS y crea las tablas necesarias en la base de datos determinada 
+
+	por los parámetros establecidos en el archivo mysite/settings.py. Verás un mensaje por cada migración que se aplica
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+(información desestimada)
+
+
+	Sincronización de la bases de datos:
+	____________________________________
+
+
+	_de ésta menra estaremos indicándole ha django, la ubicación de la base de datos a crear a través, de una ruta 
+
+	abasoluta así, como el nombre de la base de datos específica como el tipo
+
+
+	_luego, debemos navegamos a través, de la consola de comandos de window, hasta la ubicación del proyecto, 
+
+	específicamente a la ubicación del archivo "djangoProyect/manage.py"
+
+
+	_ya en esa ubicación debemos tipear el siguiente script: 
+
+
+
+
+		"python manage.py syncdb + enter"
+
+
+
+
+	Creación de super usuario:
+	__________________________
+
+
+	_luego nos pedirá en el proceso que creemos un super usuario, le decimos que "yes + enter"
+
+
+	_así, nos perdirá un username, le indicaremos por ej: "tonyMaster"
+
+	
+	_también, nos dedirá un email addres, le indicaremos por ej: "monoproduccion@gmail.com"
+
+
+	_por último, nos pedirá un passwork, el cuál, al tipearlo no podremos verlos en pantalla así, que 
+
+	tendremos que ser cuidadosos en no repetir charácteres no deseados, luego tendremos que conformar
+
+	éste password, en éste caso le indicaremos el password "15728364"
+
+
+	_así, al final nos dirá "Superuser created successfully"
+
+
+	---------------------------------------------------------------------------------------------------------------
+
+
+	Generación de bases de datos:
+	_____________________________
+
+
+	_así, podremos ver que al final de éste proceso en la ruta específicada en el proyecto, en este caso en la
+
+	ubicación del "manage.py"
+
+
+	_se ha creado un archivo con el nombre y extensión indicado en la configuración del archivo "settings.py",
+
+	en éste caso específico se ha creado el archivo "C:\djangoProyect\", "database.sqlite"
+
+
+
+
+
+

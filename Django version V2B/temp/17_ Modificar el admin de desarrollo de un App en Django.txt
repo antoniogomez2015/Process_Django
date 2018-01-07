@@ -1,0 +1,131 @@
+
+http://www.serviporno.com/videos/asi-entrena-sheena-shaw-su-ano/
+
+
+Curso de Django (21 videos)
+
+	https://www.youtube.com/playlist?list=PLEtcGQaT56cg3A3r-TNoc-PyVeOuAMB4x
+
+	Ejemplos de database de django, ver el tutorial 5, del curso "https://www.youtube.com/watch?v=LW1pAgKf4Eg&list=PLEtcGQaT56cg3A3r-TNoc-PyVeOuAMB4x&index=5"
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+modificar el admin de desarrollo de una App en Django:
+______________________________________________________
+
+	
+	Descripción:
+	____________
+
+
+	_ésta opción nos permite personalizar las variables, métodos y opciones que se mostrarán en el admin de desarrollo de una determinada app
+
+
+
+	Modificar un admin de un app:
+	_____________________________
+
+
+	_para ésto, debemos abrir el archivo "admin.py", ubicado en la ruta de la app, respectiva
+
+
+	_y a partir de el siguiente script "from django.contrib import admin", podremos incluir elementos adicionales que podemos mostrar también,
+
+	en el servidor de desarrollo y django
+
+
+	_por ejemplo, podríamos mostrar la información de la tabla "from .models import Question", del ejemplo en cuestión, así, podríasmos 
+
+	importar al admin, de desarrollo todos los modelos deseados
+
+
+	_y luego, a partir de éste comentario "# Register your models here.", debemos agregar el siguiente script "admin.site.register(Question)",
+
+	para cada modelo que desiemos agregar, quedado el admin.py, de la siguiente manera:
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+from django.contrib import admin
+
+# Register your models here.
+
+admin.site.register(blog)
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+
+Personalizar como se visualizan los modelos en el admin:
+________________________________________________________
+
+
+Referencia:
+
+	Curso Django 8 - Model Admin
+
+		https://www.youtube.com/watch?v=KXcYH8kaODs&index=8&list=PLmuz5ELXWWbYUXYLhj7pc2hm8_kK_ixIs
+
+
+
+	_así, dentro del archivo "models", de la respectiva app, deseada debemos agregar la siguiente clase posteriormente
+
+	a las clases existentes, ej:
+
+
+	class blogPostAdmin(admin.ModelAdmin):
+		list_display = 'title, body, time'
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+from django.db import models
+
+# Create your models here.
+
+class blogPost(models.Model):
+	tittle=models.CharField(max_length=150)
+	body=models.TextField()
+	time=models.DateTimeField()
+
+
+class blogPostAdmin(admin.ModelAdmin):
+	list_display = 'title, body, time'
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+	_y en el archivo "admin.py", ubicado dentro de la app, debemos también, agregar el siguiente código 
+
+	complementario al ya existente: "admin.site.register(blogPost,blogPostAdmin)"
+
+	
+
+------------------------------------------------------------------------------------------------------------------------
+
+from django.contrib import admin
+
+# Register your models here.
+
+admin.site.register(blogPost,blogPostAdmin)
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+

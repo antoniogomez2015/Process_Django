@@ -1,0 +1,20 @@
+
+
+
+
+Instalar parquetes en Pypi, de Python
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+	_para ésto, primero debemos navegar hasta la ubicación pi.py, a través, de la consola de comandos de window,
+
+	yendo ha "C:\Python34\Scripts"
+
+
+	_y en dicha ubicación debemos correr el siguiente script "pip install + (nombre del paquete) + enter"

@@ -1,0 +1,89 @@
+
+Curso de Django (21 videos)
+
+	https://www.youtube.com/playlist?list=PLEtcGQaT56cg3A3r-TNoc-PyVeOuAMB4x
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Volcado de la información sobre los modelos generados en la app respectiva:
+___________________________________________________________________________
+
+
+	_Mediante la ejecución de makemigrations, usted está diciendo a Django que usted ha hecho algunos cambios en sus modelos (en este caso, usted 
+
+	ha hecho los nuevos) y que desea que los cambios se almacenan como una migración.
+
+
+	_Las migraciones son cómo Django almacena cambios en sus modelos (y por lo tanto el esquema de base de datos) - son 
+
+	simplemente los archivos en el disco. Usted puede leer la migración para su nuevo modelo si lo desea; es la encuestas 
+
+	de archivos / migraciones / 0001_initial.py. No se preocupe, usted no espera que usted leerlos cada vez que Django hace 
+
+	uno, sino que están diseñados para ser humanos editable en caso de que quiera ajustar manualmente cómo Django cambia las
+
+	cosas.
+
+
+	_Hay un comando que ejecutará las migraciones para usted y administrar el esquema de base de datos automáticamente - eso
+
+	se llama "migrate", y vendremos a él en un momento - pero primero, vamos a ver lo que la migración de SQL correría. 
+
+	El comando sqlmigrate toma nombres de migración y devuelve su SQL:
+
+
+	_para ésto primero debemos nagegar hasta la ubicación del proyecto donde se encuentra el archivo "manage.py", a través,
+
+	de la consola de comandos de windows, y ya estando allí correr el siguiente script:
+
+
+
+
+
+		"python manage.py sqlmigrate polls 0001"
+
+
+
+
+
+	así, èste nos arrojará un conformación como la siguiente de lo existente, ej:
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+BEGIN;
+CREATE TABLE "polls_choice" (
+    "id" serial NOT NULL PRIMARY KEY,
+    "choice_text" varchar(200) NOT NULL,
+    "votes" integer NOT NULL
+);
+CREATE TABLE "polls_question" (
+    "id" serial NOT NULL PRIMARY KEY,
+    "question_text" varchar(200) NOT NULL,
+    "pub_date" timestamp with time zone NOT NULL
+);
+ALTER TABLE "polls_choice" ADD COLUMN "question_id" integer NOT NULL;
+ALTER TABLE "polls_choice" ALTER COLUMN "question_id" DROP DEFAULT;
+CREATE INDEX "polls_choice_7aa0f6ee" ON "polls_choice" ("question_id");
+ALTER TABLE "polls_choice"
+  ADD CONSTRAINT "polls_choice_question_id_246c99a640fbbd72_fk_polls_question_id"
+    FOREIGN KEY ("question_id")
+    REFERENCES "polls_question" ("id")
+    DEFERRABLE INITIALLY DEFERRED;
+
+COMMIT;
+
+
+
+
+
+

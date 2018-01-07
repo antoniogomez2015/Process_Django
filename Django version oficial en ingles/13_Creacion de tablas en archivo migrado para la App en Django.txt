@@ -1,0 +1,100 @@
+
+
+Curso de Django (21 videos)
+
+	https://www.youtube.com/playlist?list=PLEtcGQaT56cg3A3r-TNoc-PyVeOuAMB4x
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Creación de tablas en archivo migrado para la app en Django:
+____________________________________________________________
+
+
+
+	Descripción:
+	____________
+
+
+	_el archivo "0001_initial.py", el cuál, fué creado en la migración de los archivos del proyecto principal a los archivos a de la app,
+
+	el contiene la información del model/o
+
+
+
+	migración de bases de datos a los arvhivos de la app:
+	_____________________________________________________
+
+
+	_primero navegamos hasta la ubicación del proyecto respectivo a través, de la consola de comandos de windows
+
+
+	_y a continuación tipeamos el siguiente script: 
+
+
+
+
+
+
+		"python manage.py sqlmigrate (nombre de la app) + 0001"
+
+
+
+
+
+
+	así, se generarán las siguientes tablas siguiendo el ejemplo:
+
+	-----------------------------------------------------------------------------------------------------------------------------------------
+
+	BEGIN;
+	CREATE TABLE "polls_choice" (
+    		"id" serial NOT NULL PRIMARY KEY,
+    		"choice_text" varchar(200) NOT NULL,
+    		"votes" integer NOT NULL
+	);
+	CREATE TABLE "polls_question" (
+    		"id" serial NOT NULL PRIMARY KEY,
+    		"question_text" varchar(200) NOT NULL,
+    		"pub_date" timestamp with time zone NOT NULL
+	);
+	ALTER TABLE "polls_choice" ADD COLUMN "question_id" integer NOT NULL;
+	ALTER TABLE "polls_choice" ALTER COLUMN "question_id" DROP DEFAULT;
+	CREATE INDEX "polls_choice_7aa0f6ee" ON "polls_choice" ("question_id");
+	ALTER TABLE "polls_choice"
+  	  ADD CONSTRAINT "polls_choice_question_id_246c99a640fbbd72_fk_polls_question_id"
+    		FOREIGN KEY ("question_id")
+    	REFERENCES "polls_question" ("id")
+    	DEFERRABLE INITIALLY DEFERRED;
+
+	COMMIT;
+
+	-----------------------------------------------------------------------------------------------------------------------------------------
+
+	
+	_por último debemos hacer en la ubicación del proyecto a través, de la consola de comandos de windows
+
+	
+	_para luego correr el script "python manage.py migrate", de nuevo para crear las tablas correspondientes a nuestros modelos en la base de datos:
+
+
+
+DETALLES:
+_________
+
+
+    Cambiar nuestros modelos (en models.py).
+
+    Correr python manage.py makemigrations para crear las migraciones correspondientes a esos cambios
+
+    Correr python manage.py migrate para aplicar esos cambios a la base de datos.
+

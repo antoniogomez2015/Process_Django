@@ -1,0 +1,276 @@
+
+http://www.serviporno.com/videos/asi-entrena-sheena-shaw-su-ano/
+
+
+Curso de Django (21 videos)
+
+	https://www.youtube.com/playlist?list=PLEtcGQaT56cg3A3r-TNoc-PyVeOuAMB4x
+
+
+	https://docs.djangoproject.com/en/1.8/ref/databases/#mysql-notes
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+
+
+Crear y configurar bases de datos para Django:
+______________________________________________
+
+
+	_en la versión de django 3.4, soporta los siguientes tipos de bases de datos:
+
+
+		_Oracle
+
+		
+		_MuSql
+
+
+		_postgreSQL
+
+
+		_SQLite
+
+
+	_otros proyectos no oficiales también, utilizan bases de datos no relacionales como mongoDB
+
+
+NOTE:	cada base de datos para poder conectarse con nuestro proyecto necesita de una librería python,
+
+	específica, un componente que permite ha python, conectar con la base de datos concreta
+
+
+	por defecto biene ya configurada la bases de datos SQLite, dentro del "settings.py", del 
+
+	respectivo proyecto
+
+
+
+	_a continuación se expresan la implementación de los siguientes motores de bases de datos disponibles:
+
+
+	ENGINE – Puede ser 
+
+
+		'django.db.backends.postgresql_psycopg2', 
+
+		'django.db.backends.mysql', 
+
+		'django.db.backends.sqlite3' 
+
+		'django.db.backends.oracle'
+
+
+
+Creación de bases de datos SQLite:
+___________________________________
+
+
+
+	Configuración de la bases de datos:
+	___________________________________
+
+
+	_primero debemos abrir el archivo "settings.py", ubicado dentro de la carpeta del proyecto principal, en
+
+	éste caso en "Django\miPrimerProyecto"
+
+
+	_luego, dentro del archivo "settings.py", vamos a la sección de "DATABASES", la cuál, debemos configurar
+
+	de la siguiente manera: (en caso de trabajar con las bases de datos SQLite)
+
+
+	NOTE:	_primero debemos indicar a través, de una ruta absoluta la ubicación donde deseamos que django nos cree
+
+		un nuevo archivo de bases de datos para el proyecto, en este caso "proof.sqlite"
+
+		_cuando se crea un ruta absoluta los slash, deben de colocarse con la inclinación hacia la derecha así,
+
+		estemos trabajando bajo la configuración de windows, tampoco se coloca la unidad de disco ni los dos 
+
+		puntos, ej: "c:"
+	
+	---------------------------------------------------------------------------------------------------------------
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': '/djangoProyect/database.sqlite',
+    }
+}
+
+	---------------------------------------------------------------------------------------------------------------
+
+
+Creación de bases de datos MySql:
+_________________________________
+
+
+	_para ésto debemos indicarle a la configuración del proyecto que vamos ha utilizar el tipo de bases de datos
+
+	mysql, en éste caso, para eso debemos editar el archivo "settings.py", ubicado en el proyecto principal respectivo
+
+
+	_asì, buscamos la variable "DATABASES", dentro de "settings.py", y la cambiamos de la siguiente manera:
+
+
+		_'ENGINE': 'django.db.backends.
+
+			_así, después de "'ENGINE': 'django.db.backends.", debemos indicar seguido del punto de forma 
+
+			concatenada el tipo de bases de datos ha utilizar, en éste caso utilizaremos ".mysql" 
+
+
+
+		_'NAME': 'django',
+
+			_aquí podremos indicar el nombre que le dimos a la base de datos de el PhyMyadmin
+
+
+
+		_'USER': 'root',
+
+			_debemos indicar el usuario de nuestro servidor local, en éste caso "XAMPP", y cuando no
+
+			tenemos un usuario determinado utilizaremos "root"
+
+
+
+		_'PASSWORD': '',
+
+			_si disponemos de un password, para ésta base de datos creada en "XAMPP", debemos indicarlo
+
+			más si no disponemos de un password, lo podemos dejar vacío ''
+
+
+
+		_'HOST': '',
+
+
+			_si disponemos de una personalización del host, debemos indicarla si no  disponemos de nunguna
+
+			dejamos el campo vacío '', de ésta manera interpretará que es "http://localhost"
+
+
+
+		_'PORT': '',
+
+			_si disponemos de una configuración para puerto la indicamos si no dejamos el campo vacío '',
+
+	---------------------------------------------------------------------------------------------------------------
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django',
+        'NAME': 'databaseMySql',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': '',
+        'PORT': '',
+
+    }
+}
+
+	---------------------------------------------------------------------------------------------------------------
+
+
+	Crear tablas de la base de datos para las Apps, existentes en "settings.py":
+	____________________________________________________________________________
+
+
+	_para ésto debemos navegar en la consola de comandos de windows, hasta la ubicación del proyecto y de la app
+
+
+	_y estando en esa ubicación correr el siguientes script 
+
+
+
+
+		"python manage.py. migrate"
+
+
+
+	
+	_El comando migrate se fija en el setting INSTALLED_APPS y crea las tablas necesarias en la base de datos determinada 
+
+	por los parámetros establecidos en el archivo mysite/settings.py. Verás un mensaje por cada migración que se aplica
+
+
+
+
+
+	Sincronización de la bases de datos:
+	____________________________________
+
+
+	_de ésta menra estaremos indicándole ha django, la ubicación de la base de datos a crear a través, de una ruta 
+
+	abasoluta así, como el nombre de la base de datos específica como el tipo
+
+
+	_luego, debemos navegamos a través, de la consola de comandos de window, hasta la ubicación del proyecto, 
+
+	específicamente a la ubicación del archivo "djangoProyect/manage.py"
+
+
+	_ya en esa ubicación debemos tipear el siguiente script: 
+
+
+
+
+		"python manage.py syncdb + enter"
+
+
+
+
+	Creación de super usuario:
+	__________________________
+
+
+	_luego nos pedirá en el proceso que creemos un super usuario, le decimos que "yes + enter"
+
+
+	_así, nos perdirá un username, le indicaremos por ej: "tonyMaster"
+
+	
+	_también, nos dedirá un email addres, le indicaremos por ej: "monoproduccion@gmail.com"
+
+
+	_por último, nos pedirá un passwork, el cuál, al tipearlo no podremos verlos en pantalla así, que 
+
+	tendremos que ser cuidadosos en no repetir charácteres no deseados, luego tendremos que conformar
+
+	éste password, en éste caso le indicaremos el password "15728364"
+
+
+	_así, al final nos dirá "Superuser created successfully"
+
+
+	---------------------------------------------------------------------------------------------------------------
+
+
+	Generación de bases de datos:
+	_____________________________
+
+
+	_así, podremos ver que al final de éste proceso en la ruta específicada en el proyecto, en este caso en la
+
+	ubicación del "manage.py"
+
+
+	_se ha creado un archivo con el nombre y extensión indicado en la configuración del archivo "settings.py",
+
+	en éste caso específico se ha creado el archivo "C:\djangoProyect\", "database.sqlite"
+
+
+
+
+
+

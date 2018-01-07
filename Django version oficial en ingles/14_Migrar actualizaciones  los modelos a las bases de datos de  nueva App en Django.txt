@@ -1,0 +1,104 @@
+
+
+Curso de Django (21 videos)
+
+	https://www.youtube.com/playlist?list=PLEtcGQaT56cg3A3r-TNoc-PyVeOuAMB4x
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Migrar las actualizaciones de los modelos a las bases de datos de la nueva app:
+_______________________________________________________________________________
+
+
+	_Ahora, ejecute "migrate", de nuevo para crear esas tablas modelo en su base de datos
+
+
+	_para ésto primero debemos nagegar hasta la ubicación del proyecto donde se encuentra el archivo "manage.py", a través,
+
+	de la consola de comandos de windows, y ya estando allí correr el siguiente script:
+
+
+
+
+
+		"python manage.py migrate"
+
+
+	
+	
+	así, nos arrojará una lista con resumen detallado de la migración como el siguiente:
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+Operations to perform:
+  Synchronize unmigrated apps: staticfiles, messages
+  Apply all migrations: admin, contenttypes, polls, auth, sessions
+Synchronizing apps without migrations:
+  Creating tables...
+    Running deferred SQL...
+  Installing custom SQL...
+Running migrations:
+  Rendering model states... DONE
+  Applying <migration name>... OK
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+
+
+	_El comando migrate toma todas las migraciones que no han sido aplicadas (Django rastrea cuáles se aplican utilizando 
+
+	una table, especial en su base de datos llamada django_migrations) y les va en contra de su base de datos - en esencia, 
+
+	la sincronización de los cambios realizados en el modelo con el esquema en la base de datos.
+
+
+	_Las migraciones son muy potentes y permiten cambiar sus modelos con el tiempo, a medida que desarrolle su proyecto, sin 
+
+	la necesidad de eliminar su base de datos o las tablas y hacer otros nuevos - que se especializa en la actualización de 
+
+	su base de datos en vivo, sin perder datos. 
+
+
+	_Vamos a cubrir en mayor profundidad en la última parte del tutorial, pero por ahora, recordamos la guía de tres pasos 
+
+	para hacer cambios en el modelo:
+
+
+
+	Change your models (in models.py).
+
+
+		Run: 
+
+
+			"python manage.py makemigrations" 
+
+
+
+		para crear las migraciones de los cambios creados en los modelos
+
+
+
+		Run:
+
+
+			"python manage.py migrate"
+
+
+
+		para aplicar los cambios de los mismos en la bases de datos 
+
+
+
+

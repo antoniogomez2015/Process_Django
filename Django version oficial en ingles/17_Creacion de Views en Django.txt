@@ -1,0 +1,182 @@
+
+
+
+Curso de Django (21 videos)
+
+	https://www.youtube.com/playlist?list=PLEtcGQaT56cg3A3r-TNoc-PyVeOuAMB4x
+
+
+Tutorial N° 05 de Django 1.5: Vistas basadas en clases (Class-based views)
+
+	https://www.youtube.com/watch?v=bVOTTCTyqco
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Creación de Views en Django:
+____________________________
+
+
+	Descripción:
+	____________
+
+
+	_para poder mostrar nuestro contenido primero tenemos que crear una view
+
+	
+	_la aplicación django, procesará las peticiones que le hagamos pero para ello necesita saber donde mostrar la información
+
+
+	_aquí entra lo que muchos frameworks, denominan el rooting, el cuál, tendremos que indicarlo dentro de el arvhico settings.py,
+
+	en la ruta principal de nuestro proyecto
+
+
+	_y tendremos que hacerlo dentro de una variable llamanda "URLPATTERNS", 
+
+
+
+	Crear View:
+	___________
+
+	_para ésto, tenemos que editar el archivo "view.py", ubicado en la ruta de la aplicación, en este caso en "miFirstProject/myFirstAppDjango"
+
+
+	_luego, debemos sustituir todo el código por el siguiente:
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+from django.shortcuts import render
+
+# create your views here.
+def index(request):
+    return render(request, "index.html", {})
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+	Implementación:
+	_______________
+
+
+	_las views, primeramente deben importar las funciones que van ha implementar, en éste caso utilizaremos el función "render", por ende
+
+	tendremos que importar ésta, ej: "from django.shortcuts import render", ésta debería la primera línea de instrucción de la view, respectiva
+
+
+	_así, una view, de django no es más que una función python
+
+	
+	_la cuál, está definida por un índice, en éste caso "index", el cuál tiene como único parámetro() un objecto, "request", el cuál, toma todos 
+
+	los requerimientos del usuario, quedando así, "ndex(request)"
+
+
+	_y luego devuelve "return", otro objecto "render", el cuál, contiene el requerimiento del primer objecto "request", y la la página html, de la
+
+	coincidencia, quedando así, "render(request, "index.html", {}"
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+	Ejemplo de View:
+	_______________
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+"""las views, ó vistas indican como se transmite la información de la base de datos a una parte visual
+a la que el cliente puede ver ó también, podríamos decir que la información que portan las views, es la
+que se traduce y renderizará en el documento html"""
+
+"""la view, extrae información de la base de datos y la prepara para mostrarla en la pantalla, ahora 
+como ésta información se muestra ó renderiza, ésto no depende la view, si no que la vista llama ha una
+elemento llamado 'template', así, podríamos traducir template, como plantilla y dicha plantilla contiene
+una gran cantidad de marcado html, con algunas inserciones 'build-in', de django, que son enviadas desde 
+las views, con elcontenido específico respectivo de la base de datos,"""
+
+"""de ésta manera se separa lo que se va ha mostrar de como se va ha mostrar"""
+
+"""///////////////////////////////////////////////////////////////////////////////////////////////"""
+
+"""primero proceso ha importar los elementos 'Paginator, InvalidPage, EmptyPage', para poder así, controlar
+como y cuando elementos se representan en pantalla como también, para los casos de invalidaciones y oáginas 
+vacióas """
+
+"""luego importo 'reverse', para controlar el orden en el cuál, se representará el contenido"""
+
+"""también, importo todos (*), los elementos del modelo personalizado de nuestra app, en éste caso 'blog',"""
+
+"""ahora procedemos ha crear la primera vista/view, en éste caso será 'main', y cada vez que se le haga una 
+petición 'request', ésta devolverá lo siguiente:
+
+a través, de un atributo de variable, 'entrada', llamamos y guardamos todos los objectos de la clase que creamos 
+en 'models.py', en éste caso es la clase 'Entrada', a través, del constructor 'objects.all()', y que los ordene 
+por su fecha de creación descendente a través, de la instrucción 'order_by("-fecha")',"""
+
+"""y a su vez, también, le indicamos a través, del atributo de varible 'paginator', que represente las entradas
+del blog, con un máximo de tres entradas por página a través, de la instrucción 'Paginator(entrada,3)',"""
+
+
+"""ahora colocaremos unas estructuras de control 'try', donde la variable 'pagina', será igual ha 
+'int(request.GET.get("page",'1'))', es decir, que trate de tomar el valor de la página '1', y si no puede
+entonces de igual manera le asigne el valor de '1', a través, de la instrucción 'except ValueError: pagina = 1',
+
+y en la siguiente estructura de control indicamos que la variable 'entrada', será igual a la paginación de la página
+a través, de la instrucción 'paginator.pagina(pagina)', y si no puede por que esté trabajando con una página invalidaciones
+ó vacía entonces la paginación equivaldrá al número total de páginas"""
+
+"""ahora tenemos que indicar que template, ó platilla es el que deseamos utilizar ó lanzar, para ésto, utilizaremos la
+siguiente instrucción 'return', así, a través, de un 'listado.html', al cuál, le estamos pasando todos los atributos de
+variable de la view a través, de un diccionario por medio de la instruccion 'dict',"""
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+from django.shortcuts import render
+
+# Create your views here.
+
+from django.core.paginator import Paginator, InvalidPage, EmptyPage
+from django.core.urlresolvers import reverse
+
+from blob.models import *
+
+def main(request):
+	entrada = Entrada.objects.all().order_by("-fecha")
+	paginator = Paginator(entrada,3)
+
+	try: pagina = int(request.GET.get("page",'1'))
+	except ValueError: pagina = 1
+
+	try: entrada = paginator.pagina(pagina)
+	except (invalidPage, EmptyPage):
+		entrada = paginator.pagina(paginator.num_pages)
+
+
+	return render_to_response("listado.html",dict(entrada = entrada, usuario=request.user))
+
+
+
+
+
+
+

@@ -1,0 +1,56 @@
+
+http://www.serviporno.com/videos/asi-entrena-sheena-shaw-su-ano/
+
+
+Curso de Django (21 videos)
+
+	https://www.youtube.com/playlist?list=PLEtcGQaT56cg3A3r-TNoc-PyVeOuAMB4x
+
+	Ejemplos de database de django, ver el tutorial 5, del curso "https://www.youtube.com/watch?v=LW1pAgKf4Eg&list=PLEtcGQaT56cg3A3r-TNoc-PyVeOuAMB4x&index=5"
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Crear un super usuario en Django:
+_________________________________
+
+	
+	_a continuación del paso anterior éste nos pedirá que creemos un super usuario para poder acceder al servidor de desarrollo de django, 
+
+	es preciso disponer de un super usuario para acceder al servidor de desarrollo
+
+
+	_ éste proceso de crear un super usuario por lo general nos lo proprorciona django al momento de crear una nueva bases de datos más por
+
+	nuestra cuenta podemos llevar a cabo éste proceso
+
+
+	_para ésto, primero navegamos hasta la ubicación del proyecto deseado a través, de la consola de windows
+
+	
+	_luego corremos el siguiente script: 
+
+
+
+
+		"python manage.py createsuperuser" 
+
+
+
+
+	así, podremos suministrar un nuevo usuario y contraseña
+
+
+
+
+
+

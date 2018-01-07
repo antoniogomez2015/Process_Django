@@ -1,0 +1,135 @@
+
+
+
+
+
+Curso de Django (21 videos)
+
+	https://www.youtube.com/playlist?list=PLEtcGQaT56cg3A3r-TNoc-PyVeOuAMB4x
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+Comandos generales para el servidor de Django:
+______________________________________________
+
+
+
+	_python manage.py help
+
+		_éste nos brinda una vista de ayuda donde muestra los comandos disponibles a utilizar dentro de la misma consola de comandos de window, 
+
+		en la ruta de un proyecto ó app, 
+
+
+		_python manage.py sql --help
+
+
+			_más si requerimos información específica de uno de éstos comandos mostrados podemos tipear el siquiente código, ej 
+
+			"python manage.py sql --help", así, éste nos arrojará información del comando "sql"
+
+
+
+	_python manage.py
+
+
+		_éste comando nos permite ver todos los comandos disponibles para el servidor de django, para la version
+
+		django1.8.6, son los siguientes:
+
+
+			_[auth]
+
+				_cangepassword
+
+				_createsuperuser
+
+
+
+			_[django]
+
+				_check
+
+				_compilemessages
+
+				_createcachetable
+
+				_dbshell
+
+				_diffsettings
+
+				_dumpdata
+
+				_flush
+
+				_inspectdb
+
+				_loaddata
+
+				_makemessages
+
+				_makemigrations
+
+				_migrate
+
+				_runfcgi
+
+				_shell
+
+				_showmigrations
+
+				_sql
+
+				_sqlall
+
+				_sqlclear
+
+				_sqlcustom
+
+				_sqldropindexes
+
+				_sqlflush
+
+				_sqlindexed
+
+				_sqlmigrate
+
+				_sqlsequencereset
+
+				_squashmigrations
+
+>				_startapp
+
+				_startproject
+
+				_syncdb
+
+				_test
+
+				_testserver
+
+				_validate
+
+			
+			 [sessions]
+
+				_clearsessions
+
+
+			[staticfiles]
+
+				_collectstatic
+
+				_findstatic
+
+				_runserver
+
+
+
+
+

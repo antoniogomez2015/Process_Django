@@ -1,0 +1,141 @@
+
+
+
+Curso de Django (21 videos)
+
+	https://www.youtube.com/playlist?list=PLEtcGQaT56cg3A3r-TNoc-PyVeOuAMB4x
+
+	Ejemplos de database de django, ver el tutorial 5, del curso "https://www.youtube.com/watch?v=LW1pAgKf4Eg&list=PLEtcGQaT56cg3A3r-TNoc-PyVeOuAMB4x&index=5"
+
+
+https://github.com/wq/wq.db/issues/48
+
+Tutorial N° 05 de Django 1.5: Vistas basadas en clases (Class-based views)
+	https://www.youtube.com/watch?v=bVOTTCTyqco
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Templates y archivos html en Django:
+____________________________________
+
+	
+	Descripción:
+	____________
+
+
+	_tenemos la posibilidad de utilizar la sintaxis, nativa del lenguaje de marcado html, sin ningún tipo de intervención ó agrega
+
+
+	_más también disponemos de un metalenguaje de djando el cuál, nos permite incrementar los alcances y optimización e integración
+
+	entre django, otros
+
+
+
+	Metalenguaje de plantillas:
+	___________________________
+
+
+	_para relacionar los diferentes elementos de la base de datos dijanto utiliza un metalengaje bien definido el cuál, se expresa a continuación
+
+
+
+	Variables:
+	__________
+
+
+	_todos los elementos que encuentren dentro de la esctrura de una doble llave {{}}, serán interpretados como una variable estandar de python, ej:
+
+	{{pregunta.asunto}},
+
+
+
+	Tag Template:
+	_____________
+
+	
+		Ciclo for:
+		__________
+
+
+		_así, todos los contenido dentro de llaves y signos de porcentajes {% %}, se interpretarán como con "Template Tag", éste lo que hace es
+
+		decirle al sistema de plantillas que lleve a cabo una función específica, en éste caso estamos utilizando el "tag", "for", ó ciclo for,
+
+		así, éste iterará en la variable "preguntas", como en el siguiente ejemplo: "{% for pregunta in preguntas %}", así, por cada pregunta
+
+		que haya en preguntas nos arrojará el contenido solicitado como en el siguiente ejemplo:
+
+
+		----------------------------------------------------------------------------------------------------------------------------------------
+
+
+		{% for pregunta in preguntas %}
+
+			<a href="{% url "pregunta_detalles" pregunta.id %}">{{ pregunta.asunto }} ?</a>
+
+
+
+		Condicional If:
+		_______________
+
+
+		{% if pregunta.descripcion %}
+
+			{{pregunta.descripcion}}
+
+		{% else %}
+
+			No se ha incluido descripcion
+
+		{% endif %}
+
+
+
+
+	Filtro de plnatilla:
+	____________________
+
+
+		_los filtros filtran la salida de una variable, éstos pueden ser utilizados para indicar como deseamos que se presente la variable
+
+		como para tareas más complejas
+
+
+		_los filtro de plantillas van contiguos al nombre de una variable estandar a través de un signo "pipe", "|", quedando como el siguiente
+
+		ejemplo: {{pregunta.fecha_publicacion|date: "D, d/m/y" }}
+
+
+		_en el ejemplo anterior estamos utilizando el filtro "Date:", el cuál, permite formatear un fecha en días, meses y años
+
+
+
+
+http://pan.baidu.com/s/1sjwrHTV
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+

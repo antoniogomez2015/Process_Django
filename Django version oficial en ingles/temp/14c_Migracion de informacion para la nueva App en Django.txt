@@ -1,0 +1,79 @@
+
+http://www.serviporno.com/videos/asi-entrena-sheena-shaw-su-ano/
+
+
+Curso de Django (21 videos)
+
+	https://www.youtube.com/playlist?list=PLEtcGQaT56cg3A3r-TNoc-PyVeOuAMB4x
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Migración de información para la nueva app en Django:
+_____________________________________________________
+
+
+
+	Descripción:
+	____________
+
+
+	_las migraciones es como django almacena los cambios en sus modelos y, por lo tanto el esquema de la base de datos son simplemente archivos 
+
+	en el disco
+
+
+	_éstos archivos de información se guardan en la carpeta del modelo app, respectiva, en éste ejemplo: 
+
+		"C:\proyecto\MTVMCotizacion\miPrimerProyecto\miSecondAppDjango\migrations", específicamente en el archivo "0001_initial",
+
+	(ésto es a partir de haber realizado el paso anterior)
+
+
+	
+	Migración:
+	__________
+
+
+	_primero debemos navegar hasta la ubicación del respectivo proyecto, en este caso: "miPrimerProyecto", en la consola de comando de windows
+
+
+	_luengo tipeamos el siguiente script 
+
+
+
+
+
+		"python manage.py makemigrations + el nombre de la app + enter"
+
+
+
+
+
+	en éste caso "miSecondAppDjango", así, nos arrojará un mensaje como éste:
+
+
+
+		Migrations for 'polls':
+  			0001_initial.py:
+    				- Create model Question
+   		 		- Create model Choice
+    				- Add field question to choice
+
+
+
+
+
+
+
+
+

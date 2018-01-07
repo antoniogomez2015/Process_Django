@@ -1,0 +1,105 @@
+
+
+
+Curso de Django (21 videos)
+
+	https://www.youtube.com/playlist?list=PLEtcGQaT56cg3A3r-TNoc-PyVeOuAMB4x
+
+	Ejemplos de database de django, ver el tutorial 5, del curso "https://www.youtube.com/watch?v=LW1pAgKf4Eg&list=PLEtcGQaT56cg3A3r-TNoc-PyVeOuAMB4x&index=5"
+
+
+https://github.com/wq/wq.db/issues/48
+
+Tutorial N° 05 de Django 1.5: Vistas basadas en clases (Class-based views)
+	https://www.youtube.com/watch?v=bVOTTCTyqco
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Templates en Django:
+____________________
+
+	
+	Descripción:
+	____________
+
+
+	_las templates, nos necesarias para poder mostrar el contenido configurado en las view de django
+
+
+
+	Estructura de archivos:
+	_______________________
+
+
+	_para ésto, debemos crear un nuevo directorio en la ruta principal del respectivo proyecto, ej: 
+
+	"myFirstProject/templates"
+
+
+	_más dentro del directorio "templates", debemos hacer sub-directorios para cada una de nuestras apps,
+
+	a menos que el proyecto cuente sólo con una app
+
+
+
+	Configuración de directorios:
+	_____________________________
+
+
+	_ahora lo que tendremos que hacer es indicarle al proyecto principal de django, que vamos ha utilizar dicho directorio
+
+	ó sub-directorio para guardar todos los archivos .html
+
+	
+	_para ésto, debemos editar el siguiente archivo "settings", ubicado en la ruta principal del proyecto
+
+
+	_y dentro de éste debemos buscar la variable "TEMPLATES ={}", en la cuál tendremos que sustituir el siguiente contenido:
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+	_así, estaremos indicando a través, de la instrucción 'DIRS': 
+
+		_que busque una ruta de directorio
+
+
+	_y la ruta a través, de la instrucción de [os.path.join(BASE_DIR, 'templates')],
+
+		_lo cuál, significa que busque en la ruta "path", y se conecte "Joint", en el directorio "templates", que creamos en el directorio
+
+		principal del proyecto
+
+
+
+
+
+
+

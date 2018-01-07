@@ -1,0 +1,116 @@
+
+
+
+Curso de Django (21 videos)
+
+	https://www.youtube.com/playlist?list=PLEtcGQaT56cg3A3r-TNoc-PyVeOuAMB4x
+
+
+Tutorial N° 05 de Django 1.5: Vistas basadas en clases (Class-based views)
+
+	https://www.youtube.com/watch?v=bVOTTCTyqco
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Creación de Views en Django:
+____________________________
+
+
+	Descripción:
+	____________
+
+	
+	_Una view es un “tipo” de página web en nuestra aplicación Django que generalmente provee una función específica y tiene un template particular. 
+
+	Por ejemplo, en una aplicación de blog, uno podría tener las siguientes views:
+
+    		_Blog homepage – muestra las últimas entradas.
+
+    		_Detalle de una entrada – página correspondiente a una entrada o post.
+
+    		_Archivo anual – muestra los meses de una año con sus correspondientes entradas.
+
+    		_Archivo mensual – muestra los días de un mes con las correspondientes entradas.
+
+    		_Archivo diario – muestra todas las entradas en un día dado.
+
+    		_Acción de comentar – maneja el posteo de comentarios en una entrada dada.
+
+
+
+	_para poder mostrar nuestro contenido primero tenemos que crear una view
+
+	
+	_la aplicación django, procesará las peticiones que le hagamos pero para ello necesita saber donde mostrar la información
+
+
+	_aquí entra lo que muchos frameworks, denominan el rooting, el cuál, tendremos que indicarlo dentro de el arvhico settings.py,
+
+	en la ruta principal de nuestro proyecto
+
+
+	_y tendremos que hacerlo dentro de una variable llamanda "URLPATTERNS", 
+
+
+
+	Crear View:
+	___________
+
+	_para ésto, tenemos que editar el archivo "view.py", ubicado en la ruta de la aplicación, en este caso en "miFirstProject/myFirstAppDjango"
+
+
+	_luego, debemos sustituir todo el código por el siguiente:
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+from django.shortcuts import render
+
+# create your views here.
+def index(request):
+    return render(request, "index.html", {})
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+	Implementación:
+	_______________
+
+
+	_las views, primeramente deben importar las funciones que van ha implementar, en éste caso utilizaremos el función "render", por ende
+
+	tendremos que importar ésta, ej: "from django.shortcuts import render", ésta debería la primera línea de instrucción de la view, respectiva
+
+
+	_así, una view, de django no es más que una función python
+
+	
+	_la cuál, está definida por un índice, en éste caso "index", el cuál tiene como único parámetro() un objecto, "request", el cuál, toma todos 
+
+	los requerimientos del usuario, quedando así, "ndex(request)"
+
+
+	_y luego devuelve "return", otro objecto "render", el cuál, contiene el requerimiento del primer objecto "request", y la la página html, de la
+
+	coincidencia, quedando así, "render(request, "index.html", {}"
+
+
+
+
+
+
+
+
+

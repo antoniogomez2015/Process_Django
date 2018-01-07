@@ -1,0 +1,63 @@
+
+http://www.serviporno.com/videos/asi-entrena-sheena-shaw-su-ano/
+
+
+Curso de Django (21 videos)
+
+	https://www.youtube.com/playlist?list=PLEtcGQaT56cg3A3r-TNoc-PyVeOuAMB4x
+
+	Ejemplos de database de django, ver el tutorial 5, del curso "https://www.youtube.com/watch?v=LW1pAgKf4Eg&list=PLEtcGQaT56cg3A3r-TNoc-PyVeOuAMB4x&index=5"
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Correr el servidor de desarrollo en Django:
+___________________________________________
+
+	
+	_para acceder al servidor de desarrollo primero debemos correr el servidor para que así, este disponible
+
+
+	_primero debemos de navegar hasta la ubicación del proyecto a través, de la consola de comandos de windows
+
+
+	_luego, tipeamos el siguiente escript, "python manage.py runserver", así, el servidor de desarrollo quedará activado y disponible
+
+
+	NOTE:	la ventana de la consola de comandos de windos, que utilizamos para correr el servidor de desarrollo de django no debemos de
+
+		cerrarla ya que de lo contrario dejará de funcionar el servidor de desarrollo de django
+
+
+
+
+Acceder al servidor:
+____________________
+
+
+
+	Vista general:
+	______________
+
+
+	_para ésto, vamos ha "localhost:8000", ó también, a través, de su IP, " http://127.0.0.1:8000"
+
+
+
+	Admin de desarrollo:
+	____________________
+
+
+	_para ésto, vamos ha "localhost:8000/admin", ó a través, de su IP, "http://127.0.0.1:8000/admin"
+
+
+
